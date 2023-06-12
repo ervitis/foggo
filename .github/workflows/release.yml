@@ -12,7 +12,7 @@ on:
       - '.github/workflows/**'
   push:
     tags:
-      - v1.*
+      - v*
 
 env:
   GO_VERSION: 1.20
