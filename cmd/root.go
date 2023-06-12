@@ -1,5 +1,5 @@
 /*
-Copyright © 2022 s14t284 rikeda71@gmail.com
+Copyright © 2022 ervitis rikeda71@gmail.com
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -46,14 +46,16 @@ $ foggo afop --struct ${STRUCT_TYPE_NAME} --package ${PACKAGE_PATH}
 	}
 
 	// set arguments
-	args := []string{"struct", "package"}
-	shortArgs := []string{"s", "p"}
+	args := []string{"struct", "package", "no-instance"}
+	shortArgs := []string{"s", "p", "n"}
 	usages := []string{
 		"Target struct name (required)",
 		"Package name having target struct",
+		"Do not create the New method",
 	}
 	rootCmd.PersistentFlags().StringVarP(&Args.Struct, args[0], shortArgs[0], "", usages[0])
 	rootCmd.PersistentFlags().StringVarP(&Args.Package, args[1], shortArgs[1], ".", usages[1])
+	rootCmd.PersistentFlags().BoolVarP(&Args.NoInstance, args[2], shortArgs[2], false, usages[2])
 
 	// set struct to required parameter
 	err := rootCmd.MarkPersistentFlagRequired(args[0])

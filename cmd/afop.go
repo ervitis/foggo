@@ -1,6 +1,5 @@
 /*
-Copyright © 2022 s14t284 rikeda71@gmail.com
-
+Copyright © 2022 ervitis rikeda71@gmail.com
 */
 package cmd
 
@@ -9,10 +8,10 @@ import (
 	"os"
 	"path"
 
-	"github.com/s14t284/foggo/internal/generator"
-	"github.com/s14t284/foggo/internal/logger"
-	"github.com/s14t284/foggo/internal/parser"
-	"github.com/s14t284/foggo/internal/writer"
+	"github.com/ervitis/foggo/internal/generator"
+	"github.com/ervitis/foggo/internal/logger"
+	"github.com/ervitis/foggo/internal/parser"
+	"github.com/ervitis/foggo/internal/writer"
 	"github.com/spf13/cobra"
 )
 
@@ -55,7 +54,12 @@ func generateAFOP(out io.Writer) error {
 		return err
 	}
 
-	code, err := g.GenerateAFOP(pkg.Name, Args.Struct, fields)
+	var code string
+	if Args.NoInstance {
+		code, err = g.GenerateAFOPWithoutNew(pkg.Name, Args.Struct, fields)
+	} else {
+		code, err = g.GenerateAFOP(pkg.Name, Args.Struct, fields)
+	}
 	if err != nil {
 		return err
 	}

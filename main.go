@@ -1,5 +1,5 @@
 /*
-Copyright © 2022 s14t284 rikeda71@gmail.com
+Copyright © 2022 ervitis rikeda71@gmail.com
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -22,7 +22,7 @@ THE SOFTWARE.
 package main
 
 import (
-	"github.com/s14t284/foggo/cmd"
+	"github.com/ervitis/foggo/cmd"
 )
 
 func main() {

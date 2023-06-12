@@ -1,8 +1,8 @@
 # foggo
 
-[![ci](https://github.com/s14t284/foggo/actions/workflows/ci.yml/badge.svg)](https://github.com/s14t284/foggo/actions/workflows/ci.yml)
-[![Release](https://github.com/s14t284/foggo/actions/workflows/release.yml/badge.svg)](https://github.com/s14t284/foggo/actions/workflows/release.yml)
-[![Coverage Status](https://coveralls.io/repos/github/s14t284/foggo/badge.svg?branch=main)](https://coveralls.io/github/s14t284/foggo?branch=main)
+[![ci](https://github.com/ervitis/foggo/actions/workflows/ci.yml/badge.svg)](https://github.com/ervitis/foggo/actions/workflows/ci.yml)
+[![Release](https://github.com/ervitis/foggo/actions/workflows/release.yml/badge.svg)](https://github.com/ervitis/foggo/actions/workflows/release.yml)
+[![Coverage Status](https://coveralls.io/repos/github/ervitis/foggo/badge.svg?branch=main)](https://coveralls.io/github/ervitis/foggo?branch=main)
 
 [日本語版 README](./README.ja.md)
 
@@ -12,7 +12,7 @@ __foggo__ is generator of `Functional Option Pattern` And `Applicable Functional
 
 ```shell
 $ go install golang.org/x/tools/cmd/goimports@latest  # foggo use 'goimports' command
-$ go install github.com/s14t284/foggo@latest
+$ go install github.com/ervitis/foggo@latest
 ```
 
 ## Usage
@@ -29,6 +29,7 @@ Flags:
 Global Flags:
   -p, --package string   Package name having target struct (default ".")
   -s, --struct string    Target struct name (required)
+  -n, --no-instance bool Do not create the New method (default false)
 ```
 
 ### Generate with command line

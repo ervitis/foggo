@@ -6,7 +6,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/s14t284/foggo/internal/generator"
+	"github.com/ervitis/foggo/internal/generator"
 	"github.com/stretchr/testify/assert"
 )
 

@@ -8,7 +8,7 @@ import (
 	"strings"
 	"text/template"
 
-	"github.com/s14t284/foggo/internal/generator/templates"
+	"github.com/ervitis/foggo/internal/generator/templates"
 )
 
 type Generator struct {
@@ -30,6 +30,18 @@ func (g *Generator) GenerateFOP(pkgName string, structName string, sts []*Struct
 // GenerateAFOP is the function to generate code of Applicable Functional Option Pattern from struct
 func (g *Generator) GenerateAFOP(pkgName string, structName string, sts []*StructField) (string, error) {
 	tpl := template.Must(template.New("t").Parse(templates.AFOPTemplate))
+	return g.generateInternal(pkgName, structName, sts, tpl)
+}
+
+// GenerateAFOPWithoutNew is the function to generate code of Applicable Functional Option Pattern from struct
+func (g *Generator) GenerateAFOPWithoutNew(pkgName string, structName string, sts []*StructField) (string, error) {
+	tpl := template.Must(template.New("t").Parse(templates.AFOPTemplateWithoutNew))
+	return g.generateInternal(pkgName, structName, sts, tpl)
+}
+
+// GenerateFOPWithoutNew is the function to generate code of Functional Option Pattern from struct
+func (g *Generator) GenerateFOPWithoutNew(pkgName string, structName string, sts []*StructField) (string, error) {
+	tpl := template.Must(template.New("t").Parse(templates.FOPTemplateWithoutNew))
 	return g.generateInternal(pkgName, structName, sts, tpl)
 }
 

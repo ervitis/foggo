@@ -6,8 +6,8 @@ import (
 	"go/types"
 	"strings"
 
+	"github.com/ervitis/foggo/internal/generator"
 	"github.com/fatih/structtag"
-	"github.com/s14t284/foggo/internal/generator"
 )
 
 const (
