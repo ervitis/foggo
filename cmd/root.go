@@ -1,5 +1,5 @@
 /*
-Copyright © 2022 ervitis rikeda71@gmail.com
+Copyright © 2022 s14t284 rikeda71@gmail.com
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -42,7 +42,7 @@ $ foggo fop --struct ${STRUCT_TYPE_NAME} --package ${PACKAGE_PATH}
 ## Generate 'Applicable Functional Option Pattern' code
 $ foggo afop --struct ${STRUCT_TYPE_NAME} --package ${PACKAGE_PATH}
 `,
-		Version: "0.0.5",
+		Version: "0.0.6",
 	}
 
 	// set arguments

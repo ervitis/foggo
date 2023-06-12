@@ -1,5 +1,5 @@
 /*
-Copyright © 2022 ervitis rikeda71@gmail.com
+Copyright © 2022 s14t284 rikeda71@gmail.com
 */
 package cmd
 
