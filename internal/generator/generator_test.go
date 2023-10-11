@@ -96,12 +96,24 @@ func (o AOption) apply(s *TestData) {
 	s.A = o.A
 }
 
+func WithA(A string) TestDataOption {
+	return func(args *TestData) {
+		args.A = A
+	}
+}
+
 type BOption struct {
 	B int
 }
 
 func (o BOption) apply(s *TestData) {
 	s.B = o.B
+}
+
+func WithB(B int) TestDataOption {
+	return func(args *TestData) {
+		args.B = B
+	}
 }
 `
 
