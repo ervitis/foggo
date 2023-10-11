@@ -7,7 +7,7 @@ toolchain go1.21.1
 require (
 	github.com/fatih/structtag v1.2.0
 	github.com/spf13/cobra v1.7.0
-	github.com/stretchr/testify v1.7.0
+	github.com/stretchr/testify v1.8.4
 	golang.org/x/tools v0.14.0
 )
 
