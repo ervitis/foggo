@@ -12,10 +12,4 @@ type {{ .Name }}Option struct {
 func (o {{ .Name }}Option) apply(s *{{ $.structName }}) {
 	s.{{ .Name }} = o.{{ .Name }}
 }
-
-func With{{ .Name }}({{ .Name }} {{ .Type }}) {{ $.structName }}Option {
-	return func(args *{{ $.structName }}) {
-		args.{{ .Name }} = {{ .Name }}
-	}
-}
 {{ end }}{{ end }}`
